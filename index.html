@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yudnaris Prado | Portafolio Profesional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ========== VARIABLES GLOBALES ========== */
+        :root {
+            /* Modo Oscuro (por defecto) */
+            --bg-overlay: rgba(13, 0, 24, 0.88);
+            --bg-section-dark: rgba(13, 0, 24, 0.92);
+            --bg-section-darker: rgba(8, 0, 16, 0.96);
+            --bg-navbar: rgba(16, 0, 43, 0.97);
+            --border-color: rgba(157, 78, 221, 0.25);
+            --text-white: white;
+            --text-muted: rgba(255, 255, 255, 0.72);
+            --text-muted-light: rgba(255, 255, 255, 0.5);
+            --badge-bg: rgba(157, 78, 221, 0.18);
+            --card-bg: rgba(36, 0, 70, 0.6);
+            --contact-bg: rgba(36, 0, 70, 0.5);
+            --footer-bg: rgba(8, 0, 16, 0.98);
+            --primary: #9d4edd;
+            --primary-hover: #7b2cbf;
+            --progress-bg: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Modo Claro */
+        body.light-mode {
+            --bg-overlay: rgba(245, 240, 255, 0.92);
+            --bg-section-dark: rgba(245, 240, 255, 0.96);
+            --bg-section-darker: rgba(235, 228, 250, 0.98);
+            --bg-navbar: rgba(255, 255, 255, 0.95);
+            --border-color: rgba(106, 13, 173, 0.2);
+            --text-white: #1e1a2f;
+            --text-muted: #2d2a3e;
+            --text-muted-light: #4a456b;
+            --badge-bg: rgba(106, 13, 173, 0.1);
+            --card-bg: rgba(230, 220, 250, 0.7);
+            --contact-bg: rgba(235, 225, 255, 0.8);
+            --footer-bg: rgba(220, 210, 245, 0.95);
+            --primary: #7b2cbf;
+            --primary-hover: #5a1e8a;
+            --progress-bg: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            padding-top: 60px;
+            font-family: 'DM Sans', sans-serif;
+            background-color: #0d0018;
+            transition: background-color 0.3s ease, color 0.2s ease;
+        }
+
+        body.light-mode {
+            background-color: #f8f4ff;
+        }
+
+        /* FONDO GLOBAL */
+        .bg-fondo {
+            background-image: url('img/fondo.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
+        }
+
+        .bg-fondo::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--bg-overlay);
+            z-index: 0;
+        }
+
+        .bg-fondo>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: var(--bg-navbar) !important;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem !important;
+            color: var(--text-white) !important;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-avatar {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary);
+        }
+
+        .nav-link {
+            color: var(--text-muted-light) !important;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+            padding: 0.4rem 0.8rem !important;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary) !important;
+        }
+
+        /* HERO */
+        .hero-section {
+            padding: 70px 0 60px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 30px rgba(157, 78, 221, 0.5);
+            margin-bottom: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(157, 78, 221, 0.2);
+            border: 1px solid rgba(157, 78, 221, 0.4);
+            color: var(--primary);
+            font-size: 0.78rem;
+            padding: 3px 12px;
+            border-radius: 20px;
+            margin: 2px;
+        }
+
+        .btn-hero {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 9px 28px;
+            font-size: 0.85rem;
+            transition: background 0.3s, transform 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-hero:hover {
+            background: var(--primary-hover);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-hero-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid rgba(157, 78, 221, 0.5);
+            border-radius: 30px;
+            padding: 9px 28px;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-hero-outline:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* SECCIONES */
+        .section-dark {
+            background: var(--bg-section-dark);
+            padding: 30px 0;
+            transition: background 0.2s;
+        }
+
+        .section-darker {
+            background: var(--bg-section-darker);
+            padding: 60px 0;
+            transition: background 0.2s;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-white);
+            font-size: 1.8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .trabajemos-juntos {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-white);
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-descargar {
+            background: var(--primary);
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: none;
+            margin: 0 auto;
+        }
+
+        .btn-descargar:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            color: white;
+            box-shadow: 0 5px 15px rgba(157, 78, 221, 0.4);
+        }
+
+        .section-subtitle {
+            color: var(--text-muted-light);
+            font-size: 0.82rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .purple-line {
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+            margin: 0 auto 0.5rem;
+        }
+
+        /* SOBRE MI */
+        .about-text {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* PROGRESS BARS */
+        .skill-label {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+
+        .progress {
+            height: 8px;
+            border-radius: 10px;
+            background: var(--progress-bg);
+            margin-bottom: 6px;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, var(--primary), #e040fb);
+            border-radius: 10px;
+        }
+
+        .skill-context {
+            font-size: 0.72rem;
+            color: var(--text-muted-light);
+            margin: 0 0 16px;
+        }
+
+        /* BADGES */
+        .badge-soft {
+            background: var(--badge-bg);
+            border: 1px solid rgba(157, 78, 221, 0.35);
+            color: var(--primary);
+            font-size: 0.78rem;
+            font-weight: 400;
+            padding: 5px 12px;
+            margin: 3px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        /* TIMELINE */
+        .timeline-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+
+        .timeline-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(157, 78, 221, 0.2);
+            border: 1px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            flex-shrink: 0;
+            font-size: 0.95rem;
+        }
+
+        .timeline-content h6 {
+            color: var(--text-white);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .timeline-content p {
+            color: var(--text-muted-light);
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+            line-height: 1.6;
+        }
+
+        .badge-status {
+            display: inline-block;
+            background: rgba(157, 78, 221, 0.25);
+            color: var(--primary);
+            font-size: 0.7rem;
+            padding: 2px 10px;
+            border-radius: 10px;
+        }
+
+        /* PROJECT CARDS */
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(157, 78, 221, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(157, 78, 221, 0.3);
+            border-color: rgba(157, 78, 221, 0.5);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .project-card .card-body {
+            padding: 18px;
+        }
+
+        .project-card .card-title {
+            color: var(--text-white);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .project-card .card-text {
+            color: var(--text-muted-light);
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .btn-github {
+            border: 1px solid rgba(157, 78, 221, 0.4);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.78rem;
+            padding: 6px 16px;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-github:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* CAROUSEL / TESTIMONIOS */
+        .carousel-wrapper {
+            background: rgba(36, 0, 70, 0.4);
+            border: 1px solid rgba(157, 78, 221, 0.2);
+            border-radius: 16px;
+            padding: 40px 60px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body.light-mode .carousel-wrapper {
+            background: rgba(220, 200, 255, 0.6);
+        }
+
+        .testimonial-text {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            font-style: italic;
+            line-height: 1.9;
+            margin-bottom: 1.2rem;
+        }
+
+        .testimonial-author {
+            color: var(--text-white);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .testimonial-role {
+            color: var(--text-muted-light);
+            font-size: 0.78rem;
+            margin-bottom: 10px !important;
+        }
+
+        .carousel-inner {
+            min-height: 220px;
+        }
+
+        .carousel-item {
+            padding: 0 10px;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 38px;
+            height: 38px;
+            top: 45%;
+            transform: translateY(-50%);
+            background: rgba(157, 78, 221, 0.35);
+            border-radius: 50%;
+            border: 1px solid rgba(157, 78, 221, 0.5);
+            opacity: 1;
+        }
+
+        .carousel-control-prev {
+            left: 10px;
+        }
+
+        .carousel-control-next {
+            right: 10px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        .carousel-indicators {
+            bottom: 10px;
+            margin: 0;
+        }
+
+        .carousel-indicators button {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(157, 78, 221, 0.4);
+            border: none;
+            margin: 0 4px;
+        }
+
+        .carousel-indicators button.active {
+            background: var(--primary);
+        }
+
+        /* CONTACT FORM */
+        .contact-card {
+            background: var(--contact-bg);
+            border: 1px solid rgba(157, 78, 221, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+        }
+
+        .form-control,
+        .form-select {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(157, 78, 221, 0.3);
+            color: var(--text-white);
+            font-size: 0.85rem;
+            border-radius: 8px;
+            padding: 10px 14px;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--primary);
+            color: var(--text-white);
+            box-shadow: 0 0 0 3px rgba(157, 78, 221, 0.15);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.28);
+        }
+
+        .form-label {
+            color: var(--text-muted-light);
+            font-size: 0.82rem;
+            margin-bottom: 5px;
+        }
+
+        .btn-send {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 36px;
+            font-size: 0.85rem;
+            transition: background 0.3s, transform 0.2s;
+            cursor: pointer;
+        }
+
+        .btn-send:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        .footer-custom {
+            background: var(--footer-bg);
+            border-top: 1px solid rgba(157, 78, 221, 0.2);
+            padding: 36px 0;
+        }
+
+        .social-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid rgba(157, 78, 221, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted-light);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Botones flotantes */
+        .theme-switch-wrapper,
+        .lang-switch-wrapper {
+            position: fixed;
+            left: 20px;
+            z-index: 1050;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(6px);
+            border-radius: 40px;
+            padding: 6px 12px;
+            border: 1px solid var(--primary);
+            transition: all 0.2s;
+        }
+
+        .theme-switch-wrapper {
+            bottom: 80px;
+        }
+
+        .lang-switch-wrapper {
+            bottom: 20px;
+        }
+
+        .theme-btn,
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--primary);
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 12px;
+            border-radius: 30px;
+            transition: 0.2s;
+        }
+
+        .theme-btn i,
+        .lang-btn i {
+            font-size: 1.1rem;
+        }
+
+        .theme-btn span,
+        .lang-btn span {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-white);
+        }
+
+        .theme-btn:hover,
+        .lang-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .theme-btn:hover span,
+        .lang-btn:hover span {
+            color: white;
+        }
+
+        body.light-mode .theme-switch-wrapper,
+        body.light-mode .lang-switch-wrapper {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .carousel-wrapper {
+                padding: 30px 40px;
+            }
+
+            .hero-section {
+                padding: 50px 0 45px;
+            }
+        }
+
+        #contacto-seccion .section-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2.8rem;
+            color: var(--text-white);
+        }
+
+        .trabajemos-juntos {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-white);
+            font-weight: 600;
+            font-size: 1.6rem;
+            letter-spacing: -0.5px;
+        }
+
+        /* Corrección para el título en modo claro */
+        body.light-mode .text-white {
+            color: #1e1a2f !important;
+        }
+
+        /* Asegurar que el subtítulo también se vea bien */
+        body.light-mode .hero-section p {
+            color: rgba(0, 0, 0, 0.6) !important;
+        }
+
+        /* Ajustar los badges en modo claro */
+        body.light-mode .hero-badge {
+            background: rgba(123, 44, 191, 0.15);
+            border-color: rgba(123, 44, 191, 0.4);
+            color: #5a1e8a;
+        }
+
+        /* Ajustar el color del texto en el hero para modo claro */
+        body.light-mode .hero-section h1 {
+            color: #1e1a2f !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ========== BOTONES FLOTANTES ========== -->
+    <div class="theme-switch-wrapper">
+        <button id="themeToggle" class="theme-btn"><i class="fas fa-moon"></i><span>Modo Claro</span></button>
+    </div>
+    <div class="lang-switch-wrapper">
+        <button id="langToggle" class="lang-btn"><i class="fas fa-globe"></i><span>English</span></button>
+    </div>
+
+    <!-- NAVBAR -->
+    <section class="navbar navbar-expand-lg fixed-top shadow-sm py-2">
+        <section class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="img/foto_perfil.jpeg" alt="YP" class="nav-avatar">
+                YP.
+            </a>
+            <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <article class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-1">
+                    <li class="nav-item"><a class="nav-link" href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi" data-i18n="nav_sobre">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos" data-i18n="nav_proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#comentarios"
+                            data-i18n="nav_comentarios">Comentarios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto-seccion"
+                            data-i18n="nav_contacto">Contáctame</a></li>
+                </ul>
+            </article>
+        </section>
+    </section>
+
+    <!-- HERO -->
+    <section class="bg-fondo">
+        <section id="inicio" class="hero-section">
+            <article class="container">
+                <img src="img/foto_perfil.jpeg" alt="Yudnaris Prado" class="profile-img rounded-circle">
+                <h1 class="text-white fw-bold mb-1" style="font-family:'Playfair Display',serif; font-size:2.2rem;">
+                    Yudnaris Prado</h1>
+                <p class="mb-3" style="color:rgba(255,255,255,0.55); font-size:0.9rem;" data-i18n="hero_tagline">
+                    Analista BackOffice &nbsp;·&nbsp; Especialista Cloud &nbsp;·&nbsp; QC en Golbant</p>
+                <article class="mb-4">
+                    <span class="hero-badge"><i class="fas fa-cloud me-1"></i>AWS · Azure · GCP</span>
+                    <span class="hero-badge"><i class="fas fa-code me-1"></i>Python · JS</span>
+                    <span class="hero-badge"><i class="fas fa-graduation-cap me-1"></i><span
+                            data-i18n="hero_badge_edu">Ing. Sistemas — próxima graduación</span></span>
+                </article>
+                <a href="#proyectos" class="btn-hero me-2" data-i18n="hero_btn_proyectos">Ver mis proyectos</a>
+                <a href="#contacto-seccion" class="btn-hero" data-i18n="hero_btn_contacto">Ir a contacto</a>
+            </article>
+        </section>
+    </section>
+
+    <!-- SOBRE MÍ (estructura completa sin modificar contenido) -->
+    <section id="sobre-mi" class="section-dark">
+        <section class="container">
+            <article class="text-center mb-4">
+                <article class="purple-line"></article>
+                <h2 class="section-title" data-i18n="sobre_titulo">Sobre Mí</h2>
+                <p class="section-subtitle" data-i18n="sobre_subtitulo">Tecnología + Administración + Resultados</p>
+            </article>
+            <section class="row justify-content-center mb-5">
+                <article class="col-lg-8">
+                    <p class="about-text" data-i18n="sobre_text1">Soy tecnóloga en formación, a pocos pasos de graduarme
+                        como Ingeniera Informatica de UdeCataluña, con un Técnico Laboral en Sistemas cursado en CESDE
+                        que fortaleció mis bases prácticas. Actualmente aplico ese conocimiento en el mundo real como QC
+                        en Golbant, donde verifico procesos y aseguro estándares de calidad en entornos tecnológicos.
+                    </p>
+                    <p class="about-text" data-i18n="sobre_text2">Me especializo en arquitecturas de nube (AWS, Azure,
+                        GCP) y combino ese enfoque técnico con una sólida experiencia administrativa. Mi perfil une lo
+                        técnico con lo humano — analizo, ejecuto y comunico.</p>
+                </article>
+            </section>
+            <hr style="border-color:rgba(157,78,221,0.15); margin-bottom:3rem;">
+            <article class="text-center mb-4">
+                <article class="purple-line"></article>
+                <h2 class="section-title" data-i18n="formacion_titulo">Formación & Experiencia</h2>
+                <p class="section-subtitle" data-i18n="formacion_sub">Mi camino académico y profesional</p>
+            </article>
+            <section class="row justify-content-center mb-5">
+                <section class="col-lg-8">
+                    <article class="timeline-item">
+                        <article class="timeline-icon"><i class="fas fa-briefcase"></i></article>
+                        <section class="timeline-content">
+                            <h6 data-i18n="exp1_titulo">QC — Golbant</h6>
+                            <p data-i18n="exp1_desc">Prácticas profesionales como Quality Control, verificando procesos
+                                y asegurando estándares de calidad en entornos tecnológicos.</p>
+                            <span class="badge-status" data-i18n="exp1_badge">✦ En curso · Prácticas</span>
+                        </section>
+                    </article>
+                    <section class="timeline-item">
+                        <article class="timeline-icon"><i class="fas fa-graduation-cap"></i></article>
+                        <article class="timeline-content">
+                            <h6 data-i18n="edu1_titulo">Ingeniería de Sistemas — UdeCataluña</h6>
+                            <p data-i18n="edu1_desc">A pocos pasos de graduarme. Especialización en arquitecturas cloud
+                                y desarrollo de software.</p>
+                            <span class="badge-status" data-i18n="edu1_badge">✦ Próxima graduación</span>
+                        </article>
+                    </section>
+                    <section class="timeline-item">
+                        <article class="timeline-icon"><i class="fas fa-laptop-code"></i></article>
+                        <section class="timeline-content">
+                            <h6 data-i18n="edu2_titulo">Técnico Laboral Auxiliar en Sistemas — CESDE</h6>
+                            <p data-i18n="edu2_desc">Fortaleciendo competencias técnicas y prácticas en soporte y
+                                administración de sistemas.</p>
+                            <span class="badge-status" data-i18n="edu2_badge">✦ En curso</span>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <hr style="border-color:rgba(157,78,221,0.15); margin-bottom:3rem;">
+            <article class="text-center mb-4">
+                <article class="purple-line"></article>
+                <h2 class="section-title" data-i18n="soft_titulo">Habilidades Blandas</h2>
+                <p class="section-subtitle" data-i18n="soft_sub">Competencias humanas que me definen</p>
+            </article>
+            <section class="row justify-content-center mb-5">
+                <article class="col-lg-8 text-center">
+                    <span class="badge-soft"><i class="fas fa-sync-alt me-1"></i><span
+                            data-i18n="soft1">Adaptabilidad</span></span>
+                    <span class="badge-soft"><i class="fas fa-brain me-1"></i><span data-i18n="soft2">Análisis
+                            Crítico</span></span>
+                    <span class="badge-soft"><i class="fas fa-users me-1"></i><span data-i18n="soft3">Gestión de
+                            Equipos</span></span>
+                    <span class="badge-soft"><i class="fas fa-puzzle-piece me-1"></i><span data-i18n="soft4">Solución de
+                            Retos</span></span>
+                    <span class="badge-soft"><i class="fas fa-search me-1"></i><span data-i18n="soft5">Atención al
+                            Detalle</span></span>
+                    <span class="badge-soft"><i class="fas fa-check-double me-1"></i><span data-i18n="soft6">Control de
+                            Calidad</span></span>
+                </article>
+            </section>
+            <hr style="border-color:rgba(157,78,221,0.15); margin-bottom:3rem;">
+            <section class="text-center mb-4">
+                <article class="purple-line"></article>
+                <h2 class="section-title" data-i18n="tech_titulo">Habilidades Técnicas</h2>
+                <p class="section-subtitle" data-i18n="tech_sub">Herramientas y tecnologías que domino</p>
+            </section>
+            <section class="row justify-content-center">
+                <section class="col-lg-8">
+                    <article class="skill-label"><span data-i18n="skill1_nombre">Arquitecturas Nube (AWS, Azure,
+                            GCP)</span><span>90%</span></article>
+                    <article class="progress">
+                        <article class="progress-bar" role="progressbar" style="width:90%"></article>
+                    </article>
+                    <p class="skill-context" data-i18n="skill1_ctx">Especialización central · UdeCataluña</p>
+                    <article class="skill-label"><span data-i18n="skill2_nombre">Desarrollo Web (HTML, CSS,
+                            Bootstrap)</span><span>85%</span></article>
+                    <article class="progress">
+                        <article class="progress-bar" role="progressbar" style="width:85%"></article>
+                    </article>
+                    <p class="skill-context" data-i18n="skill2_ctx">Demostrado en este portafolio</p>
+                    <article class="skill-label"><span data-i18n="skill3_nombre">Programación (Python &
+                            JS)</span><span>80%</span></article>
+                    <div class="progress">
+                        <article class="progress-bar" role="progressbar" style="width:80%"></article>
+                    </div>
+                    <p class="skill-context" data-i18n="skill3_ctx">NumPy y Pandas · proyectos académicos</p>
+                    <article class="skill-label"><span data-i18n="skill4_nombre">Análisis de Datos &
+                            BI</span><span>80%</span></article>
+                    <article class="progress">
+                        <article class="progress-bar" role="progressbar" style="width:80%"></article>
+                    </article>
+                    <p class="skill-context" data-i18n="skill4_ctx">Pandas para reportes y clasificaciones</p>
+                    <article class="skill-label"><span data-i18n="skill5_nombre">Control de Calidad
+                            (QC)</span><span>75%</span></article>
+                    <article class="progress">
+                        <article class="progress-bar" role="progressbar" style="width:75%"></article>
+                    </article>
+                    <p class="skill-context" data-i18n="skill5_ctx">Práctica activa en Golbant</p>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <!-- PROYECTOS (mismo contenido sin alterar) -->
+    <section id="proyectos" class="section-darker">
+        <section class="container">
+            <article class="text-center mb-">
+                <article class="purple-line"></article>
+                <h2 class="section-title" data-i18n="proy_titulo">Mis Proyectos</h2>
+                <p class="section-subtitle" data-i18n="proy_sub">Proyectos desarrollados durante mi formación académica
+                </p>
+            </article>
+            <section class="row g-4">
+                <section class="col-12 col-md-6 col-lg-4">
+                    <section class="project-card"><img src="img/proyecto1.jpeg" class="card-img-top"
+                            alt="Gestión de Parqueadero">
+                        <article class="card-body">
+                            <h5 class="card-title" data-i18n="proy1_tit">Sistema de Gestión de Parqueadero</h5>
+                            <p class="card-text" data-i18n="proy1_desc">Sistema en Python con NumPy para administrar un
+                                parqueadero de 8 plantas con 5 espacios por planta. Controla ocupación en tiempo real.
+                            </p>
+                        </article>
+                        <article class="px-3 pb-3"><a href="https://github.com/yudprado17/ParqueaderoCarro.py"
+                                target="_blank" class="btn-github"><i class="fab fa-github me-1"></i><span
+                                    data-i18n="github_btn">Ver en GitHub</span></a></article>
+                    </section>
+                </section>
+                <section class="col-12 col-md-6 col-lg-4">
+                    <section class="project-card"><img src="img/proyecto2.jpeg" class="card-img-top"
+                            alt="Mundial de Fútbol">
+                        <article class="card-body">
+                            <h5 class="card-title" data-i18n="proy2_tit">Gestor de Grupo — Mundial de Fútbol</h5>
+                            <p class="card-text" data-i18n="proy2_desc">Plataforma en Python con Pandas para gestionar
+                                resultados de un grupo del Mundial. Registra encuentros y consulta tabla de
+                                clasificación.</p>
+                        </article>
+                        <article class="px-3 pb-3"><a href="https://github.com/yudprado17/Mundial.py" target="_blank"
+                                class="btn-github"><i class="fab fa-github me-1"></i><span data-i18n="github_btn">Ver en
+                                    GitHub</span></a></article>
+                    </section>
+                </section>
+                <section class="col-12 col-md-6 col-lg-4">
+                    <section class="project-card"><img src="img/proyecto3.jpeg" class="card-img-top" alt="Bingo">
+                        <article class="card-body">
+                            <h5 class="card-title" data-i18n="proy3_tit">Juego de Bingo por Consola</h5>
+                            <p class="card-text" data-i18n="proy3_desc">Bingo interactivo en consola. El participante
+                                llena su tablero con diez números y se extraen balotas aleatorias hasta encontrar un
+                                ganador.</p>
+                        </article>
+                        <article class="px-3 pb-3"><a href="https://github.com/yudprado17/Bingo_Python_yud"
+                                target="_blank" class="btn-github"><i class="fab fa-github me-1"></i><span
+                                    data-i18n="github_btn">Ver en GitHub</span></a></article>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <!-- COMENTARIOS (contenido original con traducción en data-i18n) -->
+    <section id="comentarios" class="section-dark">
+        <section class="container">
+            <article class="text-center mb-10">
+                <article class="purple-line"></article>
+                <h2 class="section-title" data-i18n="test_titulo">Lo que dicen de mi trabajo</h2>
+                <p class="section-subtitle" data-i18n="test_sub">Opiniones de colegas, profesores y compañeros</p>
+            </article>
+            <section class="row justify-content-center">
+                <section class="col-lg-8">
+                    <section class="carousel-wrapper">
+                        <article id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel"
+                            data-bs-interval="5000">
+                            <section class="carousel-indicators"><button type="button"
+                                    data-bs-target="#testimoniosCarousel" data-bs-slide-to="0"
+                                    class="active"></button><button type="button" data-bs-target="#testimoniosCarousel"
+                                    data-bs-slide-to="1"></button><button type="button"
+                                    data-bs-target="#testimoniosCarousel" data-bs-slide-to="2"></button><button
+                                    type="button" data-bs-target="#testimoniosCarousel"
+                                    data-bs-slide-to="3"></button><button type="button"
+                                    data-bs-target="#testimoniosCarousel" data-bs-slide-to="4"></button><button
+                                    type="button" data-bs-target="#testimoniosCarousel" data-bs-slide-to="5"></button>
+                            </section>
+                            <section class="carousel-inner text-center pb-4">
+                                <article class="carousel-item active"><i class="fas fa-quote-left mb-3"
+                                        style="color:var(--primary); font-size:1.5rem;"></i>
+                                    <p class="testimonial-text" data-i18n="test1_txt">"Yudnaris es una profesional
+                                        excepcional con una gran capacidad de organización y liderazgo. Su enfoque
+                                        técnico y su resiliencia la convierten en un activo invaluable."</p>
+                                    <p class="testimonial-author" data-i18n="test1_autor">Nicol Alba</p>
+                                    <p class="testimonial-role" data-i18n="test1_rol">Compañero de trabajo y estudio</p>
+                                </article>
+                                <section class="carousel-item"><i class="fas fa-quote-left mb-3"
+                                        style="color:var(--primary); font-size:1.5rem;"></i>
+                                    <p class="testimonial-text" data-i18n="test2_txt">"Destaco enormemente su
+                                        pensamiento crítico y su habilidad para resolver problemas. El dominio que
+                                        Yudnaris tiene sobre las herramientas digitales es sobresaliente."</p>
+                                    <p class="testimonial-author" data-i18n="test2_autor">Wilmar del Valle</p>
+                                    <p class="testimonial-role" data-i18n="test2_rol">Compañero de trabajo y estudio</p>
+                                </section>
+                                <section class="carousel-item"><i class="fas fa-quote-left mb-3"
+                                        style="color:var(--primary); font-size:1.5rem;"></i>
+                                    <p class="testimonial-text" data-i18n="test3_txt">"Yudnaris demostró durante su
+                                        formación en CESDE una capacidad analítica sobresaliente y un compromiso
+                                        inquebrantable con la calidad del código. Es un profesional que no solo resuelve
+                                        problemas, sino que busca siempre la eficiencia y la innovación en cada proyecto
+                                        que emprende."</p>
+                                    <p class="testimonial-author" data-i18n="test3_autor">Jorge Pérez</p>
+                                    <p class="testimonial-role" data-i18n="test3_rol">Docente de Desarrollo de Software
+                                        - CESDE</p>
+                                </section>
+                                <section class="carousel-item"><i class="fas fa-quote-left mb-3"
+                                        style="color:var(--primary); font-size:1.5rem;"></i>
+                                    <p class="testimonial-text" data-i18n="test4_txt">"Trabajar con Yudnaris es una
+                                        experiencia enriquecedora. Su compromiso con la calidad y su disciplina para
+                                        aprender algo nuevo cada día la hacen destacar en cualquier equipo."</p>
+                                    <p class="testimonial-author" data-i18n="test4_autor">Hector Camacho</p>
+                                    <p class="testimonial-role" data-i18n="test4_rol">Mentor</p>
+                                </section>
+                                <article class="carousel-item"><i class="fas fa-quote-left mb-3"
+                                        style="color:var(--primary); font-size:1.5rem;"></i>
+                                    <p class="testimonial-text" data-i18n="test5_txt">"Yudnaris tiene una capacidad
+                                        increíble para entender procesos y proponer mejoras. Su paso por QC en Golbant
+                                        ha sido notorio — siempre encuentra el detalle que otros pasan por alto."</p>
+                                    <p class="testimonial-author" data-i18n="test5_autor">Andrea Tibocha</p>
+                                    <p class="testimonial-role" data-i18n="test5_rol">Compañera de trabajo y estudio</p>
+                                </article>
+                                <article class="carousel-item"><i class="fas fa-quote-left mb-3"
+                                        style="color:var(--primary); font-size:1.5rem;"></i>
+                                    <p class="testimonial-text" data-i18n="test6_txt">"Lo que más admiro de Yudnaris es
+                                        su perseverancia. Combina su formación técnica con una actitud positiva y
+                                        colaborativa que eleva a todo el equipo a su alrededor."</p>
+                                    <p class="testimonial-author" data-i18n="test6_autor">Karol Ahumada</p>
+                                    <p class="testimonial-role" data-i18n="test6_rol">Compañera de trabajo y estudio</p>
+                                </article>
+                            </section><button class="carousel-control-prev" type="button"
+                                data-bs-target="#testimoniosCarousel" data-bs-slide="prev"><span
+                                    class="carousel-control-prev-icon"></span><span
+                                    class="visually-hidden">Anterior</span></button><button
+                                class="carousel-control-next" type="button" data-bs-target="#testimoniosCarousel"
+                                data-bs-slide="next"><span class="carousel-control-next-icon"></span><span
+                                    class="visually-hidden">Siguiente</span></button>
+                        </article>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+    <article style="height: 100px;"></article>
+
+    <!-- CONTACTO -->
+    <section id="contacto-seccion" class="section-dark py-5">
+        <section class="container text-center">
+            <section class="row justify-content-center">
+                <article class="col-lg-8 col-md-10">
+                    <article class="purple-line mb-1"></article>
+                    <h1 class="section-title text-center mb-1" data-i18n="contacto_titulo">Contáctame</h1>
+                    <h3 class="trabajemos-juntos mb-4" data-i18n="contacto_sub">¡Trabajemos juntos!</h3>
+                    <p class="about-text mx-auto mb-5" style="max-width: 650px;" data-i18n="contacto_text">¿Tienes un
+                        proyecto en mente, buscas sumar talento a tu equipo o simplemente quieres saludar? Me encantaría
+                        conversar contigo.</p>
+                    <article class="d-flex justify-content-center flex-wrap gap-3 mt-4"><a
+                            href="CV YUDNARIS PRADO-ES.pdf" download="CV YUDNARIS PRADO-ES.pdf" class="btn-descargar"><i
+                                class="bi bi-file-earmark-arrow-down-fill me-2"></i><span data-i18n="btn_cv">Descargar
+                                CV</span></a></article>
+                </article>
+            </section>
+        </section>
+    </section>
+    <!-- Agrega esta sección justo después de la sección de contacto, antes del footer -->
+
+    <section id="qr-section" class="section-dark py-5">
+        <section class="container text-center">
+            <article class="purple-line mb-3"></article>
+            <h2 class="section-title mb-3">Comparte mi portafolio</h2>
+            <p class="about-text mx-auto mb-4" style="max-width: 500px;">
+                Escanea este código QR para acceder a mi portafolio desde cualquier dispositivo.
+            </p>
+
+            <div class="d-flex justify-content-center flex-column align-items-center">
+                <div id="qr-code" class="mb-4"
+                    style="background: white; padding: 15px; border-radius: 20px; display: inline-block;"></div>
+
+                <div class="d-flex gap-3">
+                    <button id="downloadQR" class="btn-descargar" style="background: #6c757d;">
+                        <i class="fas fa-download me-2"></i>Descargar QR
+                    </button>
+                    <button id="shareQR" class="btn-descargar" style="background: #25D366;">
+                        <i class="fab fa-whatsapp me-2"></i>Compartir
+                    </button>
+                </div>
+                <p class="mt-3 text-muted small">El QR contiene el enlace a este portafolio</p>
+            </div>
+        </section>
+    </section>
+
+    <footer class="footer-custom text-center">
+        <section class="container">
+            <article class="d-flex justify-content-center gap-3 mb-3"><a href="https://www.linkedin.com/in/yudprado/"
+                    target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a><a
+                    href="https://github.com/yudprado17/" target="_blank" class="social-icon"><i
+                        class="fab fa-github"></i></a><a
+                    href="/cdn-cgi/l/email-protection#1b626e7f6b697a7f745b7c767a727735787476" class="social-icon"><i
+                        class="fas fa-envelope"></i></a><a href="tel:+573105004860" class="social-icon"><i
+                        class="fab fa-whatsapp"></i></a></article>
+            <p class="mb-0" style="color:rgba(255,255,255,0.3); font-size:0.75rem;">&copy; 2026 Yudnaris Prado. Todos
+                los derechos reservados.</p>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Idioma
+        const translations = {
+            es: {},
+            en: {
+                // Navegación
+                nav_inicio: "Home",
+                nav_sobre: "About",
+                nav_proyectos: "Projects",
+                nav_comentarios: "Testimonials",
+                nav_contacto: "Contact",
+
+                // Hero
+                hero_tagline: "BackOffice Analyst &nbsp;·&nbsp; Cloud Specialist &nbsp;·&nbsp; QC at Golbant",
+                hero_badge_edu: "Systems Engineering — graduating soon",
+                hero_btn_proyectos: "View my projects",
+                hero_btn_contacto: "Go to contact",
+
+                // Sobre mí
+                sobre_titulo: "About Me",
+                sobre_subtitulo: "Technology + Administration + Results",
+                sobre_text1: "I am a technologist in training, about to graduate as a Systems Engineer from UdeCataluña, with a Technical Degree in Systems from CESDE that strengthened my practical foundations. Currently I apply this knowledge in the real world as QC at Golbant, where I verify processes and ensure quality standards in technological environments.",
+                sobre_text2: "I specialize in cloud architectures (AWS, Azure, GCP) and combine this technical focus with solid administrative experience. My profile merges technical with human — I analyze, execute, and communicate.",
+
+                // Formación
+                formacion_titulo: "Education & Experience",
+                formacion_sub: "My academic and professional path",
+                exp1_titulo: "QC — Golbant",
+                exp1_desc: "Professional internship as Quality Control, verifying processes and ensuring quality standards in technological environments.",
+                exp1_badge: "✦ Ongoing · Internship",
+                edu1_titulo: "Systems Engineering — UdeCataluña",
+                edu1_desc: "About to graduate. Specialization in cloud architectures and software development.",
+                edu1_badge: "✦ Graduating soon",
+                edu2_titulo: "Technical Assistant in Systems — CESDE",
+                edu2_desc: "Strengthening technical skills in support and systems administration.",
+                edu2_badge: "✦ In progress",
+
+                // Habilidades blandas
+                soft_titulo: "Soft Skills",
+                soft_sub: "Human competencies that define me",
+                soft1: "Adaptability",
+                soft2: "Critical Analysis",
+                soft3: "Team Management",
+                soft4: "Problem Solving",
+                soft5: "Attention to Detail",
+                soft6: "Quality Control",
+
+                // Habilidades técnicas
+                tech_titulo: "Technical Skills",
+                tech_sub: "Tools and technologies I master",
+                skill1_nombre: "Cloud Architectures (AWS, Azure, GCP)",
+                skill1_ctx: "Core specialization · UdeCataluña",
+                skill2_nombre: "Web Development (HTML, CSS, Bootstrap)",
+                skill2_ctx: "Demonstrated in this portfolio",
+                skill3_nombre: "Programming (Python & JS)",
+                skill3_ctx: "NumPy and Pandas · academic projects",
+                skill4_nombre: "Data Analysis & BI",
+                skill4_ctx: "Pandas for reports and rankings",
+                skill5_nombre: "Quality Control (QC)",
+                skill5_ctx: "Active practice at Golbant",
+
+                // Proyectos
+                proy_titulo: "My Projects",
+                proy_sub: "Projects developed during my academic training",
+                proy1_tit: "Parking Management System",
+                proy1_desc: "Python system with NumPy to manage an 8-floor parking lot with 5 spaces per floor. Real-time occupancy control.",
+                proy2_tit: "Group Manager — Soccer World Cup",
+                proy2_desc: "Python platform with Pandas to manage results of a World Cup group. Registers matches and queries standings.",
+                proy3_tit: "Console Bingo Game",
+                proy3_desc: "Interactive console Bingo. The participant fills a board with ten numbers and random balls are drawn until a winner is found.",
+                github_btn: "View on GitHub",
+
+                // Testimonios
+                test_titulo: "What they say about my work",
+                test_sub: "Opinions from colleagues, teachers and peers",
+                test1_txt: '"Yudnaris is an exceptional professional with great organizational and leadership skills. Her technical approach and resilience make her an invaluable asset."',
+                test1_autor: "Nicol Alba",
+                test1_rol: "Work and study colleague",
+                test2_txt: '"I highly highlight her critical thinking and problem-solving skills. Yudnaris\'s command of digital tools is outstanding."',
+                test2_autor: "Wilmar del Valle",
+                test2_rol: "Work and study colleague",
+                test3_txt: '"Yudnaris demonstrated during her training at CESDE an outstanding analytical ability and an unwavering commitment to code quality. She is a professional who not only solves problems but always seeks efficiency and innovation in every project."',
+                test3_autor: "Jorge Pérez",
+                test3_rol: "Software Development Instructor - CESDE",
+                test4_txt: '"Working with Yudnaris is an enriching experience. Her commitment to quality and her discipline to learn something new every day make her stand out in any team."',
+                test4_autor: "Hector Camacho",
+                test4_rol: "Mentor",
+                test5_txt: '"Yudnaris has an incredible ability to understand processes and propose improvements. Her time as QC at Golbant has been remarkable — she always finds the detail others overlook."',
+                test5_autor: "Andrea Tibocha",
+                test5_rol: "Work and study colleague",
+                test6_txt: '"What I admire most about Yudnaris is her perseverance. She combines her technical training with a positive and collaborative attitude that elevates the whole team around her."',
+                test6_autor: "Karol Ahumada",
+                test6_rol: "Work and study colleague",
+
+                // Contacto
+                contacto_titulo: "Contact Me",
+                contacto_sub: "Let's work together!",
+                contacto_text: "Do you have a project in mind, want to add talent to your team or just want to say hello? I'd love to talk with you.",
+                btn_cv: "Download CV",
+
+                // QR Section (nuevas traducciones)
+                qr_titulo: "Share my portfolio",
+                qr_descripcion: "Scan this QR code to access my portfolio from any device.",
+                qr_descargar: "Download QR",
+                qr_compartir: "Share",
+                qr_nota: "The QR contains the link to this portfolio"
+            }
+        };
+        let currentLang = 'es';
+        function applyLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) el.innerText = translations[lang][key];
+                else if (lang === 'es' && key) el.innerText = el.getAttribute('data-original') || el.innerText;
+                if (!el.getAttribute('data-original') && lang === 'es') el.setAttribute('data-original', el.innerText);
+            });
+            document.querySelector('#langToggle span').innerText = (lang === 'es') ? 'English' : 'Español';
+            currentLang = lang;
+        }
+        document.getElementById('langToggle').addEventListener('click', () => {
+            const newLang = currentLang === 'es' ? 'en' : 'es';
+            applyLanguage(newLang);
+        });
+        // Tema claro/oscuro
+        const themeBtn = document.getElementById('themeToggle');
+        function setTheme(theme) {
+            if (theme === 'light') document.body.classList.add('light-mode');
+            else document.body.classList.remove('light-mode');
+            localStorage.setItem('portfolio-theme', theme);
+            themeBtn.innerHTML = theme === 'light' ? '<i class="fas fa-sun"></i><span>Modo Oscuro</span>' : '<i class="fas fa-moon"></i><span>Modo Claro</span>';
+        }
+        themeBtn.addEventListener('click', () => {
+            const isLight = document.body.classList.contains('light-mode');
+            setTheme(isLight ? 'dark' : 'light');
+        });
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme === 'light') setTheme('light');
+        else setTheme('dark');
+        applyLanguage('es');
+        // Carrusel bootstrap
+        const carouselEl = document.getElementById('testimoniosCarousel');
+        if (carouselEl) new bootstrap.Carousel(carouselEl, { interval: 10000, ride: 'carousel', wrap: true });
+    </script>
+    <!-- Agrega la librería QRCode.js justo antes de cerrar </body> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script>
+        // Generar QR con la URL actual
+        const currentURL = window.location.href;
+        const qrcodeDiv = document.getElementById("qr-code");
+
+        // Limpiar div y generar nuevo QR
+        qrcodeDiv.innerHTML = "";
+        new QRCode(qrcodeDiv, {
+            text: currentURL,
+            width: 200,
+            height: 200,
+            colorDark: "#9d4edd",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+        // Función para descargar QR como imagen
+        document.getElementById("downloadQR").addEventListener("click", function () {
+            const canvas = qrcodeDiv.querySelector("canvas");
+            if (canvas) {
+                const link = document.createElement("a");
+                link.download = "portafolio-yudnaris-qr.png";
+                link.href = canvas.toDataURL("image/png");
+                link.click();
+            } else {
+                alert("Espera un momento para generar el QR");
+            }
+        });
+
+        // Función para compartir por WhatsApp
+        document.getElementById("shareQR").addEventListener("click", function () {
+            const message = encodeURIComponent("✨ Mira mi portafolio profesional: " + currentURL);
+            window.open("https://wa.me/?text=" + message, "_blank");
+        });
+    </script>
+</body>
+
+</html>
