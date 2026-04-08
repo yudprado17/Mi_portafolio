@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Yudnaris Prado, Ingeniera de Sistemas en formación y especialista en Cloud.">
+    <meta name="keywords" content="Yudnaris Prado, Portafolio, Cloud, AWS, Azure, GCP, QC, Calidad, Sistemas">
+    <meta name="author" content="Yudnaris Prado">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yudnarisprado.github.io/">
+    <meta property="og:title" content="Yudnaris Prado | Portafolio Profesional">
+    <meta property="og:description" content="Analista BackOffice, Especialista Cloud y QC en Golbant.">
+    <meta property="og:image" content="img/foto_perfil.jpeg">
+
+    <title>Yudnaris Prado | Portafolio Profesional</title>
+    
+    <!-- Bootstrap & FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<body>
+
+    <!-- NAVBAR -->
+    <section class="navbar navbar-expand-lg fixed-top shadow-sm py-2">
+        <section class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="img/foto_perfil.jpeg" alt="YP" class="nav-avatar">
+                YP.
+            </a>
+            <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <article class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-1">
+                    <li class="nav-item"><a class="nav-link" href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi" data-i18n="nav_sobre">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos" data-i18n="nav_proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#certificados" data-i18n="nav_certificados">Certificados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#comentarios"
+                            data-i18n="nav_comentarios">Comentarios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto-seccion"
+                            data-i18n="nav_contacto">Contáctame</a></li>
+                    <!-- Botones de Control Integrados -->
+                    <li class="nav-item d-flex align-items-center ms-lg-3 gap-2 py-2 py-lg-0">
+                        <button id="themeToggle" class="theme-btn nav-btn-custom"><i class="fas fa-moon"></i><span class="d-lg-none d-xl-inline">Modo Claro</span></button>
+                        <button id="langToggle" class="lang-btn nav-btn-custom"><i class="fas fa-globe"></i><span class="d-lg-none d-xl-inline">English</span></button>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </section>
+
+    <!-- HERO -->
+    <section class="bg-fondo">
+        <section id="inicio" class="hero-section">
+            <article class="container">
+                <img src="img/foto_perfil.jpeg" alt="Yudnaris Prado" class="profile-img rounded-circle">
+                <h1 class="text-white fw-bold mb-1" style="font-family:'Playfair Display',serif; font-size:2.2rem;">
+                    Yudnaris Prado</h1>
+                <p class="mb-3" style="color:rgba(255,255,255,0.55); font-size:0.9rem;" data-i18n="hero_tagline">
+                    Analista BackOffice &nbsp;·&nbsp; Especialista Cloud &nbsp;·&nbsp; QC en Golbant</p>
+                <article class="mb-4">
+                    <span class="hero-badge"><i class="fas fa-cloud me-1"></i>AWS · Azure · GCP</span>
+                    <span class="hero-badge"><i class="fas fa-code me-1"></i>Python · JS</span>
+                    <span class="hero-badge"><i class="fas fa-graduation-cap me-1"></i><span
+                            data-i18n="hero_badge_edu">Ing. Sistemas — próxima graduación</span></span>
+                </article>
+                <a href="#proyectos" class="btn-hero me-2" data-i18n="hero_btn_proyectos">Ver mis proyectos</a>
+                <a href="#contacto-seccion" class="btn-hero" data-i18n="hero_btn_contacto">Ir a contacto</a>
+            </article>
+        </section>
+    </section>
+
+    <!-- SOBRE MÍ (estructura completa sin modificar contenido) -->
+    <section id="sobre-mi" class="section-dark">
+        <section class="container">
+            <article class="text-center mb-4">
+                <article class="purple-line"></article>
+                <h2 class="section-title" data-i18n="sobre_titulo">Sobre Mí</h2>
+                <p class="section-subtitle" data-i18n="sobre_subtitulo">Tecnología + Administración + Resultados</p>
+            </article>
+            <section class="row justify-content-center mb-5">
+                <article class="col-lg-8">
+                    <p class="about-text" data-i18n="sobre_text1">Soy tecnóloga en formación, a pocos pasos de graduarme
+                        como Ingeniera Informatica de UdeCataluña, con un Técnico Laboral en Sistemas cursado en CESDE
+                        que fortaleció mis bases prácticas. Actualmente aplico ese conocimiento en el mundo real como QC
+                        en Golbant, donde verifico procesos y aseguro estándares de calidad en entornos tecnológicos.
+                    </p>
+                    <p class="about-text" data-i18n="sobre_text2">Me especializo en arquitecturas de nube (AWS, Azure,
+                        GCP) y combino ese enfoque técnico con una sólida experiencia administrativa. Mi perfil une lo
+                        técnico con lo humano — analizo, ejecuto y comunico.</p>
+                </article>
+            </section>
+            <hr style="border-color:rgba(157,78,221,0.15); margin-bottom:3rem;">
+            <article class="text-center mb-4">
+                <article class="purple-line"></article>
+                <h2 class="section-title" data-i18n="formacion_titulo">Formación & Experiencia</h2>
+                <p class="section-subtitle" data-i18n="formacion_sub">Mi camino académico y profesional</p>
+            </article>
+            <section class="row justify-content-center mb-5">
+                <section class="col-lg-8">
+                    <article class="timeline-item">
+                        <article class="timeline-icon"><i class="fas fa-briefcase"></i></article>
+                        <section class="timeline-content">
+                            <h6 data-i18n="exp1_titulo">QC — Golbant</h6>
+                            <p data-i18n="exp1_desc">Prácticas profesionales como Quality Control, verificando procesos
+                                y asegurando estándares de calidad en entornos tecnológicos.</p>
+                            <span class="badge-status" data-i18n="exp1_badge">✦ En curso · Prácticas</span>
+                        </section>
+                    </article>
+                    <section class="timeline-item">
+                        <article class="timeline-icon"><i class="fas fa-graduation-cap"></i></article>
+                        <article class="timeline-content">
+                            <h6 data-i18n="edu1_titulo">Ingeniería de Sistemas — UdeCataluña</h6>
+                            <p data-i18n="edu1_desc">A pocos pasos de graduarme. Especialización en arquitecturas cloud
+                                y desarrollo de software.</p>
+                            <span class="badge-status" data-i18n="edu1_badge">✦ Próxima graduación</span>
+                        </article>
+                    </section>
+                    <section class="timeline-item">
+                        <article class="timeline-icon"><i class="fas fa-laptop-code"></i></article>
+                        <section class="timeline-content">
+                            <h6 data-i18n="edu2_titulo">Técnico Laboral Auxiliar en Sistemas — CESDE</h6>
+                            <p data-i18n="edu2_desc">Fortaleciendo competencias técnicas y prácticas en soporte y
+                                administración de sistemas.</p>
+                            <span class="badge-status" data-i18n="edu2_badge">✦ En curso</span>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <hr style="border-color:rgba(157,78,221,0.15); margin-bottom:3rem;">
+            <article class="text-center mb-4">
+                <article class="purple-line"></article>
+                <h2 class="section-title" data-i18n="soft_titulo">Habilidades Blandas</h2>
+                <p class="section-subtitle" data-i18n="soft_sub">Competencias humanas que me definen</p>
+            </article>
+            <section class="row justify-content-center mb-5">
+                <article class="col-lg-8 text-center">
+                    <span class="badge-soft"><i class="fas fa-sync-alt me-1"></i><span
+                            data-i18n="soft1">Adaptabilidad</span></span>
+                    <span class="badge-soft"><i class="fas fa-brain me-1"></i><span data-i18n="soft2">Análisis
+                            Crítico</span></span>
+                    <span class="badge-soft"><i class="fas fa-users me-1"></i><span data-i18n="soft3">Gestión de
+                            Equipos</span></span>
+                    <span class="badge-soft"><i class="fas fa-puzzle-piece me-1"></i><span data-i18n="soft4">Solución de
+                            Retos</span></span>
+                    <span class="badge-soft"><i class="fas fa-search me-1"></i><span data-i18n="soft5">Atención al
+                            Detalle</span></span>
+                    <span class="badge-soft"><i class="fas fa-check-double me-1"></i><span data-i18n="soft6">Control de
+                            Calidad</span></span>
+                </article>
+            </section>
+            <hr style="border-color:rgba(157,78,221,0.15); margin-bottom:3rem;">
+            <section class="text-center mb-4">
+                <article class="purple-line"></article>
+                <h2 class="section-title" data-i18n="tech_titulo">Habilidades Técnicas</h2>
+                <p class="section-subtitle" data-i18n="tech_sub">Herramientas y tecnologías que domino</p>
+            </section>
+            <section class="row justify-content-center">
+                <section class="col-lg-8">
+                    <article class="skill-label"><span data-i18n="skill1_nombre">Arquitecturas Nube (AWS, Azure,
+                            GCP)</span><span>90%</span></article>
+                    <article class="progress">
+                        <article class="progress-bar" role="progressbar" style="width:90%"></article>
+                    </article>
+                    <p class="skill-context" data-i18n="skill1_ctx">Especialización central · UdeCataluña</p>
+                    <article class="skill-label"><span data-i18n="skill2_nombre">Desarrollo Web (HTML, CSS,
+                            Bootstrap)</span><span>85%</span></article>
+                    <article class="progress">
+                        <article class="progress-bar" role="progressbar" style="width:85%"></article>
+                    </article>
+                    <p class="skill-context" data-i18n="skill2_ctx">Demostrado en este portafolio</p>
+                    <article class="skill-label"><span data-i18n="skill3_nombre">Programación (Python &
+                            JS)</span><span>80%</span></article>
+                    <article class="progress">
+                        <article class="progress-bar" role="progressbar" style="width:80%"></article>
+                    </article>
+                    <p class="skill-context" data-i18n="skill3_ctx">NumPy y Pandas · proyectos académicos</p>
+                    <article class="skill-label"><span data-i18n="skill4_nombre">Análisis de Datos &
+                            BI</span><span>80%</span></article>
+                    <article class="progress">
+                        <article class="progress-bar" role="progressbar" style="width:80%"></article>
+                    </article>
+                    <p class="skill-context" data-i18n="skill4_ctx">Pandas para reportes y clasificaciones</p>
+                    <article class="skill-label"><span data-i18n="skill5_nombre">Control de Calidad
+                            (QC)</span><span>75%</span></article>
+                    <article class="progress">
+                        <article class="progress-bar" role="progressbar" style="width:75%"></article>
+                    </article>
+                    <p class="skill-context" data-i18n="skill5_ctx">Práctica activa en Golbant</p>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <!-- PROYECTOS (mismo contenido sin alterar) -->
+    <section id="proyectos" class="section-darker">
+        <section class="container">
+            <article class="text-center mb-">
+                <article class="purple-line"></article>
+                <h2 class="section-title" data-i18n="proy_titulo">Mis Proyectos</h2>
+                <p class="section-subtitle" data-i18n="proy_sub">Proyectos desarrollados durante mi formación académica
+                </p>
+            </article>
+            <section class="row g-4">
+                <section class="col-12 col-md-6 col-lg-4">
+                    <section class="project-card"><img src="img/proyecto1.jpeg" class="card-img-top"
+                            alt="Gestión de Parqueadero">
+                        <article class="card-body">
+                            <h5 class="card-title" data-i18n="proy1_tit">Sistema de Gestión de Parqueadero</h5>
+                            <p class="card-text" data-i18n="proy1_desc">Sistema en Python con NumPy para administrar un
+                                parqueadero de 8 plantas con 5 espacios por planta. Controla ocupación en tiempo real.
+                            </p>
+                        </article>
+                        <article class="px-3 pb-3"><a href="https://github.com/yudprado17/ParqueaderoCarro.py"
+                                target="_blank" class="btn-github"><i class="fab fa-github me-1"></i><span
+                                    data-i18n="github_btn">Ver en GitHub</span></a></article>
+                    </section>
+                </section>
+                <section class="col-12 col-md-6 col-lg-4">
+                    <section class="project-card"><img src="img/proyecto2.jpeg" class="card-img-top"
+                            alt="Mundial de Fútbol">
+                        <article class="card-body">
+                            <h5 class="card-title" data-i18n="proy2_tit">Gestor de Grupo — Mundial de Fútbol</h5>
+                            <p class="card-text" data-i18n="proy2_desc">Plataforma en Python con Pandas para gestionar
+                                resultados de un grupo del Mundial. Registra encuentros y consulta tabla de
+                                clasificación.</p>
+                        </article>
+                        <article class="px-3 pb-3"><a href="https://github.com/yudprado17/Mundial.py" target="_blank"
+                                class="btn-github"><i class="fab fa-github me-1"></i><span data-i18n="github_btn">Ver en
+                                    GitHub</span></a></article>
+                    </section>
+                </section>
+                <section class="col-12 col-md-6 col-lg-4">
+                    <section class="project-card"><img src="img/proyecto3.jpeg" class="card-img-top" alt="Bingo">
+                        <article class="card-body">
+                            <h5 class="card-title" data-i18n="proy3_tit">Juego de Bingo por Consola</h5>
+                            <p class="card-text" data-i18n="proy3_desc">Bingo interactivo en consola. El participante
+                                llena su tablero con diez números y se extraen balotas aleatorias hasta encontrar un
+                                ganador.</p>
+                        </article>
+                        <article class="px-3 pb-3"><a href="https://github.com/yudprado17/Bingo_Python_yud"
+                                target="_blank" class="btn-github"><i class="fab fa-github me-1"></i><span
+                                    data-i18n="github_btn">Ver en GitHub</span></a></article>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <!-- CERTIFICACIONES (NUEVA SECCIÓN CON CARRUSEL) -->
+    <section id="certificados" class="section-darker">
+        <section class="container">
+            <article class="text-center mb-5">
+                <article class="purple-line"></article>
+                <h2 class="section-title" data-i18n="cert_titulo">Certificaciones</h2>
+                <p class="section-subtitle" data-i18n="cert_sub">Mis logros y validaciones académicas</p>
+            </article>
+
+            <!-- Carrusel de Certificados -->
+            <article id="certificadosCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+                <section class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <article class="carousel-item active">
+                        <article class="row g-4 justify-content-center px-5">
+                            <section class="col-12 col-md-4">
+                                <article class="project-card cert-item">
+                                    <img src="Certificados/MongoDB.png" class="card-img-top zoomable" alt="MongoDB Certificate">
+                                    <article class="card-body text-center"><h5 class="card-title">MongoDB Certificate</h5></article>
+                                </article>
+                            </section>
+                            <section class="col-12 col-md-4 d-none d-md-block">
+                                <article class="project-card cert-item">
+                                    <img src="Certificados/Ef level 1.png" class="card-img-top zoomable" alt="EF Standard English Test">
+                                    <article class="card-body text-center"><h5 class="card-title">EF Test (A1)</h5></article>
+                                </article>
+                            </section>
+                            <section class="col-12 col-md-4 d-none d-md-block">
+                                <article class="project-card cert-item">
+                                    <img src="Certificados/Computación Básica.png" class="card-img-top zoomable" alt="Computación Básica">
+                                    <article class="card-body text-center"><h5 class="card-title">Computación Básica</h5></article>
+                                </article>
+                            </section>
+                        </article>
+                    </article>
+                    <!-- Slide 2 -->
+                    <article class="carousel-item">
+                        <article class="row g-4 justify-content-center px-5">
+                            <section class="col-12 col-md-4">
+                                <article class="project-card cert-item">
+                                    <img src="Certificados/Basic English Course A1.png" class="card-img-top zoomable" alt="Basic English Course A1">
+                                    <article class="card-body text-center"><h5 class="card-title">Basic English A1</h5></article>
+                                </article>
+                            </section>
+                            <section class="col-12 col-md-4 d-none d-md-block">
+                                <article class="project-card cert-item">
+                                    <img src="Certificados/Cátedra Ser Emprendedor.jpeg" class="card-img-top zoomable" alt="Cátedra Ser Emprendedor">
+                                    <article class="card-body text-center"><h5 class="card-title">Cátedra Emprendedor</h5></article>
+                                </article>
+                            </section>
+                            <section class="col-12 col-md-4 d-none d-md-block">
+                                <article class="project-card cert-item">
+                                    <img src="Certificados/lenguage market.png" class="card-img-top zoomable" alt="Language Market">
+                                    <article class="card-body text-center"><h5 class="card-title">Language Market</h5></article>
+                                </article>
+                            </section>
+                        </article>
+                    </article>
+                    <!-- Slide 3 -->
+                    <article class="carousel-item">
+                        <article class="row g-4 justify-content-center px-5">
+                            <section class="col-12 col-md-4">
+                                <article class="project-card cert-item">
+                                    <img src="Certificados/Ingles Básico A1 Verbos Comunes.png" class="card-img-top zoomable" alt="Inglés Básico A1">
+                                    <article class="card-body text-center"><h5 class="card-title">Verbos Comunes A1</h5></article>
+                                </article>
+                            </section>
+                            <section class="col-12 col-md-4 d-none d-md-block">
+                                <article class="project-card cert-item">
+                                    <img src="Certificados/Inglés Básico A1 Presente Simple.png" class="card-img-top zoomable" alt="Presente Simple">
+                                    <article class="card-body text-center"><h5 class="card-title">Presente Simple A1</h5></article>
+                                </article>
+                            </section>
+                            <section class="col-12 col-md-4 d-none d-md-block">
+                                <article class="project-card cert-item">
+                                    <img src="Certificados/Inglés Básico A1 VerboTo Be.png" class="card-img-top zoomable" alt="Verbo To Be">
+                                    <article class="card-body text-center"><h5 class="card-title">Verbo To Be A1</h5></article>
+                                </article>
+                            </section>
+                        </article>
+                    </article>
+                </section>
+                
+                <!-- Controles -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#certificadosCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#certificadosCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </article>
+        </section>
+    </section>
+
+    <!-- MODAL PARA AMPLIAR IMÁGENES -->
+    <article class="modal fade" id="certModal" tabindex="-1" aria-hidden="true">
+        <article class="modal-dialog modal-lg modal-dialog-centered">
+            <article class="modal-content bg-transparent border-0">
+                <article class="modal-body p-0 text-center position-relative">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close" style="z-index: 10;"></button>
+                    <img id="modalImage" src="" class="img-fluid rounded shadow-lg animate__animated animate__zoomIn">
+                </article>
+            </article>
+        </article>
+    </article>
+
+    <!-- COMENTARIOS (contenido original con traducción en data-i18n) -->
+    <section id="comentarios" class="section-dark">
+        <section class="container">
+            <article class="text-center mb-10">
+                <article class="purple-line"></article>
+                <h2 class="section-title" data-i18n="test_titulo">Lo que dicen de mi trabajo</h2>
+                <p class="section-subtitle" data-i18n="test_sub">Opiniones de colegas, profesores y compañeros</p>
+            </article>
+            <section class="row justify-content-center">
+                <section class="col-lg-8">
+                    <section class="carousel-wrapper">
+                        <article id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel"
+                            data-bs-interval="5000">
+                            <section class="carousel-indicators"><button type="button"
+                                    data-bs-target="#testimoniosCarousel" data-bs-slide-to="0"
+                                    class="active"></button><button type="button" data-bs-target="#testimoniosCarousel"
+                                    data-bs-slide-to="1"></button><button type="button"
+                                    data-bs-target="#testimoniosCarousel" data-bs-slide-to="2"></button><button
+                                    type="button" data-bs-target="#testimoniosCarousel"
+                                    data-bs-slide-to="3"></button><button type="button"
+                                    data-bs-target="#testimoniosCarousel" data-bs-slide-to="4"></button><button
+                                    type="button" data-bs-target="#testimoniosCarousel" data-bs-slide-to="5"></button>
+                            </section>
+                            <section class="carousel-inner text-center pb-4">
+                                <article class="carousel-item active"><i class="fas fa-quote-left mb-3"
+                                        style="color:var(--primary); font-size:1.5rem;"></i>
+                                    <p class="testimonial-text" data-i18n="test1_txt">"Yudnaris es una profesional
+                                        excepcional con una gran capacidad de organización y liderazgo. Su enfoque
+                                        técnico y su resiliencia la convierten en un activo invaluable."</p>
+                                    <p class="testimonial-author" data-i18n="test1_autor">Nicol Alba</p>
+                                    <p class="testimonial-role" data-i18n="test1_rol">Compañero de trabajo y estudio</p>
+                                </article>
+                                <section class="carousel-item"><i class="fas fa-quote-left mb-3"
+                                        style="color:var(--primary); font-size:1.5rem;"></i>
+                                    <p class="testimonial-text" data-i18n="test2_txt">"Destaco enormemente su
+                                        pensamiento crítico y su habilidad para resolver problemas. El dominio que
+                                        Yudnaris tiene sobre las herramientas digitales es sobresaliente."</p>
+                                    <p class="testimonial-author" data-i18n="test2_autor">Wilmar del Valle</p>
+                                    <p class="testimonial-role" data-i18n="test2_rol">Compañero de trabajo y estudio</p>
+                                </section>
+                                <section class="carousel-item"><i class="fas fa-quote-left mb-3"
+                                        style="color:var(--primary); font-size:1.5rem;"></i>
+                                    <p class="testimonial-text" data-i18n="test3_txt">"Yudnaris demostró durante su
+                                        formación en CESDE una capacidad analítica sobresaliente y un compromiso
+                                        inquebrantable con la calidad del código. Es un profesional que no solo resuelve
+                                        problemas, sino que busca siempre la eficiencia y la innovación en cada proyecto
+                                        que emprende."</p>
+                                    <p class="testimonial-author" data-i18n="test3_autor">Jorge Pérez</p>
+                                    <p class="testimonial-role" data-i18n="test3_rol">Docente de Desarrollo de Software
+                                        - CESDE</p>
+                                </section>
+                                <section class="carousel-item"><i class="fas fa-quote-left mb-3"
+                                        style="color:var(--primary); font-size:1.5rem;"></i>
+                                    <p class="testimonial-text" data-i18n="test4_txt">"Trabajar con Yudnaris es una
+                                        experiencia enriquecedora. Su compromiso con la calidad y su disciplina para
+                                        aprender algo nuevo cada día la hacen destacar en cualquier equipo."</p>
+                                    <p class="testimonial-author" data-i18n="test4_autor">Hector Camacho</p>
+                                    <p class="testimonial-role" data-i18n="test4_rol">Mentor</p>
+                                </section>
+                                <article class="carousel-item"><i class="fas fa-quote-left mb-3"
+                                        style="color:var(--primary); font-size:1.5rem;"></i>
+                                    <p class="testimonial-text" data-i18n="test5_txt">"Yudnaris tiene una capacidad
+                                        increíble para entender procesos y proponer mejoras. Su paso por QC en Golbant
+                                        ha sido notorio — siempre encuentra el detalle que otros pasan por alto."</p>
+                                    <p class="testimonial-author" data-i18n="test5_autor">Andrea Tibocha</p>
+                                    <p class="testimonial-role" data-i18n="test5_rol">Compañera de trabajo y estudio</p>
+                                </article>
+                                <article class="carousel-item"><i class="fas fa-quote-left mb-3"
+                                        style="color:var(--primary); font-size:1.5rem;"></i>
+                                    <p class="testimonial-text" data-i18n="test6_txt">"Lo que más admiro de Yudnaris es
+                                        su perseverancia. Combina su formación técnica con una actitud positiva y
+                                        colaborativa que eleva a todo el equipo a su alrededor."</p>
+                                    <p class="testimonial-author" data-i18n="test6_autor">Karol Ahumada</p>
+                                    <p class="testimonial-role" data-i18n="test6_rol">Compañera de trabajo y estudio</p>
+                                </article>
+                            </section><button class="carousel-control-prev" type="button"
+                                data-bs-target="#testimoniosCarousel" data-bs-slide="prev"><span
+                                    class="carousel-control-prev-icon"></span><span
+                                    class="visually-hidden">Anterior</span></button><button
+                                class="carousel-control-next" type="button" data-bs-target="#testimoniosCarousel"
+                                data-bs-slide="next"><span class="carousel-control-next-icon"></span><span
+                                    class="visually-hidden">Siguiente</span></button>
+                        </article>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+    <article style="height: 100px;"></article>
+
+    <!-- CONTACTO -->
+    <section id="contacto-seccion" class="section-dark py-5">
+        <section class="container">
+            <article class="row justify-content-center">
+                <article class="col-12">
+                    <article class="contact-card shadow-lg">
+                        <section class="row g-0">
+                            <!-- Info lateral -->
+                            <article class="col-md-4 bg-primary p-4 p-lg-5 text-white d-flex flex-column justify-content-center" style="border-radius: 12px 0 0 12px; background: linear-gradient(135deg, var(--primary), var(--primary-hover)) !important;">
+                                <h2 class="h3 fw-bold mb-4" data-i18n="contacto_titulo">Contáctame</h2>
+                                <p class="mb-4 opacity-75" data-i18n="contacto_text">¿Tienes un proyecto en mente o quieres sumar talento a tu equipo? ¡Hablemos!</p>
+                                
+                                <article class="d-flex align-items-center mb-3">
+                                    <article class="timeline-icon bg-white text-primary border-0 me-3" style="width: 32px; height: 32px;"><i class="fas fa-envelope fs-6"></i></article>
+                                    <span class="small">yudprado@gmail.com</span>
+                                </article>
+                                <article class="d-flex align-items-center mb-4">
+                                    <article class="timeline-icon bg-white text-primary border-0 me-3" style="width: 32px; height: 32px;"><i class="fab fa-whatsapp fs-6"></i></article>
+                                    <span class="small">+57 310 500 4860</span>
+                                </article>
+                                
+                                <article class="mt-auto">
+                                    <a href="CV YUDNARIS PRADO-ES.pdf" download class="btn btn-light btn-sm fw-bold px-4 rounded-pill" style="color: var(--primary);">
+                                        <i class="fas fa-download me-2"></i><span data-i18n="btn_cv">Descargar CV</span>
+                                    </a>
+                                </article>
+                            </article>
+                            
+                            <!-- Formulario -->
+                            <article class="col-md-8 p-4 p-lg-5 bg-white bg-opacity-10">
+                                <form id="contactForm">
+                                    <article class="mb-3">
+                                        <label class="form-label small fw-bold" data-i18n="form_nombre">Nombre Completo</label>
+                                        <input type="text" class="form-control" placeholder="Tu nombre..." required>
+                                    </article>
+                                    <article class="mb-3">
+                                        <label class="form-label small fw-bold" data-i18n="form_email">Correo Electrónico</label>
+                                        <input type="email" class="form-control" placeholder="nombre@ejemplo.com" required>
+                                    </article>
+                                    <article class="mb-3">
+                                        <label class="form-label small fw-bold" data-i18n="form_asunto">Asunto</label>
+                                        <input type="text" class="form-control" placeholder="¿En qué puedo ayudarte?">
+                                    </article>
+                                    <article class="mb-4">
+                                        <label class="form-label small fw-bold" data-i18n="form_mensaje">Mensaje</label>
+                                        <textarea class="form-control" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                    </article>
+                                    <button type="submit" class="btn btn-primary w-100 rounded-pill fw-bold" style="background: var(--primary); border: none;">
+                                        <span data-i18n="form_btn">Enviar Mensaje</span> <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </form>
+                            </article>
+                        </section>
+                    </article>
+                </article>
+            </article>
+        </section>
+    </section>
+    <!-- Agrega esta sección justo después de la sección de contacto, antes del footer -->
+
+    <section id="qr-section" class="section-dark py-5">
+        <section class="container text-center">
+            <article class="purple-line mb-3"></article>
+            <h2 class="section-title mb-3">Comparte mi portafolio</h2>
+            <p class="about-text mx-auto mb-4" style="max-width: 500px;">
+                Escanea este código QR para acceder a mi portafolio desde cualquier dispositivo.
+            </p>
+
+            <article class="d-flex justify-content-center flex-column align-items-center">
+                <article id="qr-code" class="mb-4"
+                    style="background: white; padding: 15px; border-radius: 20px; display: inline-block;"></article>
+
+                <article class="d-flex gap-3">
+                    <button id="downloadQR" class="btn-descargar" style="background: #6c757d;">
+                        <i class="fas fa-download me-2"></i>Descargar QR
+                    </button>
+                    <button id="shareQR" class="btn-descargar" style="background: #25D366;">
+                        <i class="fab fa-whatsapp me-2"></i>Compartir
+                    </button>
+                </article>
+                <p class="mt-3 text-muted small">El QR contiene el enlace a este portafolio</p>
+            </article>
+        </section>
+    </section>
+
+    <footer class="footer-custom text-center">
+        <section class="container">
+            <article class="d-flex justify-content-center gap-3 mb-3"><a href="https://www.linkedin.com/in/yudprado/"
+                    target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a><a
+                    href="https://github.com/yudprado17/" target="_blank" class="social-icon"><i
+                        class="fab fa-github"></i></a><a
+                    href="/cdn-cgi/l/email-protection#1b626e7f6b697a7f745b7c767a727735787476" class="social-icon"><i
+                        class="fas fa-envelope"></i></a><a href="tel:+573105004860" class="social-icon"><i
+                        class="fab fa-whatsapp"></i></a></article>
+            <p class="mb-0" style="color:rgba(255,255,255,0.3); font-size:0.75rem;">&copy; 2026 Yudnaris Prado. Todos los derechos reservados.</p>
+        </section>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
